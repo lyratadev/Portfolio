@@ -1,0 +1,50 @@
+<%- include('partials/header.ejs') %>
+<%- include('partials/nav.ejs') %>
+
+  <center><h1 class="p-2 bg-light"> The Mystical Tarot</h1></center>
+  <div class="p-3 text-muted bg-light">
+  <h3 class="p-3 text-muted bg-light">
+  <span id="markImg1"></span>How many cards would you like to draw? Between 1-3</h3>
+  <input type="text" class="border border-warning" id="q1">
+  <div id="q1Feedback"></div>
+    <button id="display">Display Cards</button> <button id="reset" class="border border-danger">Reset</button>
+  </div>
+  
+  <div class="d-flex justify-content-center"> <!-- PLAY AREA -->
+
+  <!-- PLAY AREA -->
+
+<div class="container" id="displaycards" style="opacity:0;">
+
+  <div class="row justify-content-center p-3 bg-light text-black"> 
+    
+    <div class="col-4" id="card1"> <!-- CARD 1 -->
+      <h2>Card</h2>
+      <div id="displaycard1"><img src="/img/cardback.jpg"></div>
+      <button id="pullcard1" class="btn btn-outline-success">Pull Card</button>
+    </div>
+    
+    <div class="col-4" id="card2"> <!-- CARD 2 -->
+      <h2>Card</h2>
+        <div id="displaycard2"><img src="/img/cardback.jpg"></div>
+      <button id="pullcard2" class="btn btn-outline-success">Pull Card</button>
+    </div>
+    
+    <div class="col-4" id="card3"> <!-- CARD 3 -->
+      <h2>Card</h2>
+      <div id="displaycard3"><img src="/img/cardback.jpg"></div>
+      <button id="pullcard3" class="btn btn-outline-success">Pull Card</button>
+    </div>
+  </div> <!-- END ROW -->
+</div>
+
+    
+        
+      
+  </div> <!-- PLAY AREA -->
+  <br><br><br>
+    
+  </div>
+
+  <script src="js/script.js"></script> 
+  <%- include('partials/footer.ejs') %>

@@ -1,0 +1,24 @@
+body {
+	background:#2BC4E0;
+}
+
+div {
+	background:#1FE093;
+    border-radius: 10px;
+}
+
+h1 {
+	background:#E03681;
+	opacity:.9;
+  	border-radius: 25px;
+  	color:white;
+}
+
+
+footer {
+	background:#94DCE0;
+	opacity:.5;
+}
+div.results {
+	background:#4feee9;
+}

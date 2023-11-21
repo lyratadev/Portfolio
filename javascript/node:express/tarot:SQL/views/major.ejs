@@ -1,0 +1,62 @@
+<%- include('partials/header.ejs') %>
+<%- include('partials/nav.ejs') %>
+
+<html>
+<head>
+</head>
+<body onLoad="fetchData()">
+
+<div class="container bg-light">
+    <h1 class="text-center">The Major Arcana</h1>
+    <div class="row text-center">
+<span id="card">
+</span>
+<span id="name">
+</span>
+<span id="desc">
+</span>
+
+
+    </div>
+</div>
+      
+
+<script>
+  	let url = "https://rws-cards-api.herokuapp.com/api/v1/cards"
+  	async function fetchData() 
+	{
+		console.log("fetch");
+	//	let input = document.querySelector("#input").value;
+	//	input = input.toUpperCase();
+	//	console.log(input.toUpperCase());
+
+		let response = await fetch(url);
+		let data = await response.json();
+		console.log(data);
+
+		for (card of data.cards)
+		if (card.type == "major")
+		{
+        if (card.value < 10) {
+  		document.querySelector("#card").innerHTML += "<br> Type: " + card.type.toUpperCase() + 
+        " <br> Name:" + card.name + `<br><img src='/img/0${card.value_int}.jpg'><br>` + " <br> " + card.desc + "<br>";
+        }
+        else if ( card.value > 10) {
+  	  		document.querySelector("#card").innerHTML += "<br> Type: " + card.type.toUpperCase() + 
+        " <br> Name:" + card.name + `<br><img src='/img/${card.value_int}.jpg'><br>` + " <br> " + card.desc + "<br>";
+        }
+
+		//console.log(card.type)
+		//console.log(card.name)
+		console.log(card.value)
+     //if (card.value < 10)
+		}	
+
+		//document.querySelector("#symbol").innerHTML = data.symbol;
+		//document.querySelector("#open").innerHTML = "$" + data.open;
+	}
+</script>
+	</body>
+	</html>
+
+  <%- include('partials/footer.ejs') %>

@@ -1,0 +1,31 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  background-image: url("/img/bg.jpg");
+  background-color:white;
+  font-family: 'Cinzel', serif;
+  opacity: 1;
+      -webkit-transition: opacity 2s ease-in;
+    -moz-transition: opacity 2s ease-in;
+    -o-transition: opacity 2s ease-in;
+    -ms-transition: opacity 2s ease-in;
+    transition: opacity 2s ease-in;
+}
+
+h1 {
+    font-family: 'Cinzel', serif;
+}
+
+h2 {
+  font-family: 'Cinzel', cursive;
+}
+
+footer {
+  background-color:white;
+}
+
+a:hover {
+  color: hotpink;
+  opacity: 0.9;
+  transition: 0.3s;
+}
